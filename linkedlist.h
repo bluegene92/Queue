@@ -63,6 +63,10 @@ public:
     */
     Node<T>* peekTail();
 
+    /**
+        See what data at the head of the linked list
+    */
+    Node<T>* peekHead();
 private:
     Node<T>* head;
     Node<T>* tail;
@@ -210,3 +214,12 @@ Node<T>* LinkedList<T>::peekTail()
     }
 }
 #endif
+
+template <class T>
+Node<T>* LinkedList<T>::peekHead()
+{
+    if (!isEmpty())
+    {
+        return head;
+    }
+}
